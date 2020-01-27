@@ -47,8 +47,6 @@ class NotificationBannerView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 12
-        view.layer.borderWidth = 0.1
-        view.layer.borderColor = UIColor(white: 253/255, alpha: 0.8).cgColor
         return view
     }()
     
@@ -162,7 +160,7 @@ class NotificationBannerView: UIView {
         self.addSubview(self.containerView)
         self.containerView.addSubview(self.headerView)
         self.containerView.addSubview(self.textContainerView)
-        self.containerView.addSubview(self.bottomView)
+//        self.containerView.addSubview(self.bottomView)
         
         self.headerView.addSubview(self.iconImageView)
         self.headerView.addSubview(self.appNameLabel)
@@ -199,16 +197,16 @@ class NotificationBannerView: UIView {
         
         // bottom
         
-        self.containerView.addConstraints([
-            NSLayoutConstraint(item: self.textContainerView, attribute: .bottom, relatedBy: .equal, toItem: self.bottomView, attribute: .top, multiplier: 1, constant: -8).priority(900),
-            NSLayoutConstraint(item: self.containerView, attribute: .centerX, relatedBy: .equal, toItem: self.bottomView, attribute: .centerX, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: self.containerView, attribute: .bottom, relatedBy: .equal, toItem: self.bottomView, attribute: .bottom, multiplier: 1, constant: 5).priority(900)
-        ])
+//        self.containerView.addConstraints([
+//            NSLayoutConstraint(item: self.textContainerView, attribute: .bottom, relatedBy: .equal, toItem: self.bottomView, attribute: .top, multiplier: 1, constant: -8).priority(900),
+//            NSLayoutConstraint(item: self.containerView, attribute: .centerX, relatedBy: .equal, toItem: self.bottomView, attribute: .centerX, multiplier: 1, constant: 0),
+//            NSLayoutConstraint(item: self.containerView, attribute: .bottom, relatedBy: .equal, toItem: self.bottomView, attribute: .bottom, multiplier: 1, constant: 5).priority(900)
+//        ])
         
-        self.bottomView.addConstraints([
-            NSLayoutConstraint(item: self.bottomView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 35),
-            NSLayoutConstraint(item: self.bottomView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 3.5).priority(900)
-        ])
+//        self.bottomView.addConstraints([
+//            NSLayoutConstraint(item: self.bottomView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 35),
+//            NSLayoutConstraint(item: self.bottomView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 3.5).priority(900)
+//        ])
         
         // icon
         
