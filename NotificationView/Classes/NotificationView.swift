@@ -64,7 +64,7 @@ public enum NotificationViewTheme {
         case .default:
             return UIColor(white: 253/255, alpha: 0.98)
         case .dark:
-            return UIColor(white: 3/255, alpha: 0.98)
+            return UIColor(white: 28/255, alpha: 0.98)
         default:
             return nil
         }
