@@ -284,7 +284,7 @@ class NotificationBannerView: UIView {
     func setEntity(_ hideDuration: TimeInterval, appName: String?, appIcon: UIImage?, date: String?) {
         self.hideDuration = hideDuration
         self.iconImageView.image = appIcon ?? self.logoImage
-        self.appNameLabel.text = (appName ?? self.appName)?.capitalized
+        self.appNameLabel.text = (appName ?? self.appName)?.uppercased()
         self.dateLabel.text = date ?? "now"
         
         self.makeShadow()
