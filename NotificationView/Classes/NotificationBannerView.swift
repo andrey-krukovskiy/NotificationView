@@ -233,7 +233,7 @@ class NotificationBannerView: UIView {
         self.headerView.addConstraints([
             NSLayoutConstraint(item: self.appNameLabel, attribute: .trailing, relatedBy: .equal, toItem: self.dateLabel, attribute: .leading, multiplier: 1, constant: -8),
             NSLayoutConstraint(item: self.appNameLabel, attribute: .centerY, relatedBy: .equal, toItem: self.dateLabel, attribute: .centerY, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: self.headerView, attribute: .trailing, relatedBy: .equal, toItem: self.dateLabel, attribute: .trailing, multiplier: 1, constant: 8)
+            NSLayoutConstraint(item: self.headerView, attribute: .trailing, relatedBy: .equal, toItem: self.dateLabel, attribute: .trailing, multiplier: 1, constant: 16)
         ])
         
         self.addConstraint(NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 560).priority(UIScreen.main.bounds.width > 572 ? 970 : 930).identifier(.width))
@@ -284,7 +284,7 @@ class NotificationBannerView: UIView {
     func setEntity(_ hideDuration: TimeInterval, appName: String?, appIcon: UIImage?, date: String?) {
         self.hideDuration = hideDuration
         self.iconImageView.image = appIcon ?? self.logoImage
-        self.appNameLabel.text = appName ?? self.appName
+        self.appNameLabel.text = (appName ?? self.appName)?.capitalized
         self.dateLabel.text = date ?? "now"
         
         self.makeShadow()
