@@ -70,7 +70,7 @@ class NotificationBannerView: UIView {
     let appNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: 13)
         return label
     }()
     
@@ -80,7 +80,7 @@ class NotificationBannerView: UIView {
         label.setContentHuggingPriority(UILayoutPriority(252), for: .horizontal)
         label.setContentCompressionResistancePriority(UILayoutPriority(751), for: .horizontal)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 12)
+        label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .right
         return label
     }()
