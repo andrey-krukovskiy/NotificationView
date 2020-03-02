@@ -266,7 +266,7 @@ public class NotificationView: NSObject {
     
     /// NotificationView Top Margin Value
     static var topHeight: CGFloat {
-        return max(UIApplication.shared.statusBarFrame.height, 20)
+        return max(UIApplication.shared.statusBarFrame.height - 6, 20)
     }
     
     
